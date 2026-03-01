@@ -1,0 +1,15 @@
+{
+    "name": "anypress-dashboard",
+    "version": "1.0.0",
+    "description": "Local dashboard for managing Anytype → Website publish workflow",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node --watch server.js"
+    },
+    "dependencies": {
+        "express": "^4.21.0",
+        "dotenv": "^16.4.0",
+        "simple-git": "^3.27.0"
+    }
+}

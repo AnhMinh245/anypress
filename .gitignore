@@ -9,3 +9,8 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+
+# Anypress
+.env
+dashboard/node_modules/
+
