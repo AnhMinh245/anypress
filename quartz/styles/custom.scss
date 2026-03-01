@@ -1,3 +1,20 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Custom table styling — equal-width columns, better readability
+.center table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.center table th,
+.center table td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    vertical-align: top;
+    padding: 12px 16px;
+}
+
+.center table th {
+    font-weight: 700;
+    text-align: center;
+}
