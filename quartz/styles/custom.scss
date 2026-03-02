@@ -32,15 +32,22 @@
 }
 
 .hero-title {
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    color: var(--dark);
+    font-size: 3.2rem;
+    font-weight: 900;
+    letter-spacing: -0.04em;
     margin: 0 0 0.5rem;
-    background: linear-gradient(135deg, var(--secondary), var(--tertiary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    line-height: 1;
+
+    .minh {
+        color: var(--dark);
+    }
+
+    .read {
+        background: linear-gradient(135deg, var(--secondary), var(--tertiary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 }
 
 .hero-tagline {
@@ -137,8 +144,10 @@
 // Landing Page — Recent Notes Section
 // ============================================================
 .recent-notes {
-    h3:first-child {
-        display: none; // We use the heading in index.md instead
+
+    // Hide only the direct section-title h3, NOT the article title h3s inside items
+    >h3:first-child {
+        display: none;
     }
 }
 

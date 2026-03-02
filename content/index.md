@@ -3,7 +3,7 @@ title: Minhread
 ---
 
 <div class="hero">
-  <h1 class="hero-title">Minhread</h1>
+  <h1 class="hero-title"><span class="minh">Minh</span><span class="read">Read</span></h1>
   <p class="hero-tagline">Ghi chép những điều đã học, đã đọc và đã sống.</p>
 </div>
 
