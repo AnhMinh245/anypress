@@ -5,11 +5,21 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.ConditionalRender({
+      component: Component.RecentNotes({
+        title: "",
+        limit: 8,
+        showTags: true,
+        filter: (f) => f.slug !== "index" && !f.slug?.endsWith("_index"),
+      }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
+  ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/AnhMinh245",
+      Anypress: "https://github.com/AnhMinh245/anypress",
     },
   }),
 }

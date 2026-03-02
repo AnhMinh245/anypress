@@ -1,6 +1,8 @@
 @use "./base.scss";
 
-// Custom table styling — equal-width columns, better readability
+// ============================================================
+// Custom table styling — equal-width columns
+// ============================================================
 .center table {
     table-layout: fixed;
     width: 100%;
@@ -17,4 +19,167 @@
 .center table th {
     font-weight: 700;
     text-align: center;
+}
+
+// ============================================================
+// Landing Page — Hero Section
+// ============================================================
+.hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--lightgray);
+    margin-bottom: 2.5rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--dark);
+    margin: 0 0 0.5rem;
+    background: linear-gradient(135deg, var(--secondary), var(--tertiary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-tagline {
+    font-size: 1.15rem;
+    color: var(--gray);
+    margin: 0;
+    font-style: italic;
+}
+
+// ============================================================
+// Landing Page — Category Grid
+// ============================================================
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0 2.5rem;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.category-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--lightgray);
+    background: var(--light);
+    text-decoration: none !important;
+    color: inherit;
+    transition: all 0.2s ease;
+
+    &:hover {
+        border-color: var(--secondary);
+        background: var(--highlight);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .cat-icon {
+        font-size: 2rem;
+        line-height: 1;
+        flex-shrink: 0;
+        margin-top: 2px;
+    }
+
+    .cat-body {
+        h3 {
+            margin: 0 0 0.25rem;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.88rem;
+            color: var(--gray);
+            line-height: 1.5;
+        }
+    }
+}
+
+// ============================================================
+// Landing Page — Recent Notes Section
+// ============================================================
+.recent-notes {
+    h3:first-child {
+        display: none; // We use the heading in index.md instead
+    }
+}
+
+.recent-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-li {
+    border-bottom: 1px solid var(--lightgray);
+    padding: 1rem 0;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .desc h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+
+        a {
+            color: var(--dark);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--secondary);
+            }
+        }
+    }
+
+    .meta {
+        font-size: 0.82rem;
+        color: var(--gray);
+        margin: 0;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        list-style: none;
+        padding: 0;
+        margin: 0.25rem 0 0;
+
+        li a {
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: var(--highlight);
+            color: var(--secondary);
+            text-decoration: none;
+            border: 1px solid var(--lightgray);
+            transition: background 0.15s;
+
+            &:hover {
+                background: var(--secondary);
+                color: white;
+                border-color: var(--secondary);
+            }
+        }
+    }
 }

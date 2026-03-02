@@ -34,9 +34,25 @@ router.post('/', async (req, res) => {
                 const exported = await anytypeClient.exportMarkdown(obj.id);
                 if (exported.success && exported.markdown) {
                     const slug = slugify(obj.name || obj.title || obj.id);
-                    const filePath = path.join(CONTENT_DIR, `${slug}.md`);
+
+                    // Save to subfolder based on tag routing
+                    const subfolder = exported.targetFolder || '';
+                    const targetDir = subfolder
+                        ? path.join(CONTENT_DIR, subfolder)
+                        : CONTENT_DIR;
+
+                    // Ensure target directory exists
+                    if (!fs.existsSync(targetDir)) {
+                        fs.mkdirSync(targetDir, { recursive: true });
+                    }
+
+                    const filePath = path.join(targetDir, `${slug}.md`);
                     fs.writeFileSync(filePath, exported.markdown, 'utf-8');
-                    syncedFiles.push({ name: slug, path: `content/${slug}.md` });
+
+                    const relPath = subfolder
+                        ? `content/${subfolder}/${slug}.md`
+                        : `content/${slug}.md`;
+                    syncedFiles.push({ name: slug, path: relPath, folder: subfolder });
                     synced++;
                 } else {
                     failed++;
