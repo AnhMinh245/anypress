@@ -10,39 +10,22 @@ title: Minhread
 ## Danh mục
 
 <div class="category-grid">
-
 <a href="books" class="category-card">
-  <div class="cat-icon-wrap books-color">B</div>
-  <div class="cat-body">
-    <h3>📚 Books</h3>
-    <p>Ghi chú và đúc kết từ những cuốn sách đã đọc</p>
-  </div>
+<strong>📚 Books</strong>
+<span>Ghi chú và đúc kết từ những cuốn sách đã đọc</span>
 </a>
-
 <a href="insights" class="category-card">
-  <div class="cat-icon-wrap insights-color">I</div>
-  <div class="cat-body">
-    <h3>🧠 Insights</h3>
-    <p>Kiến thức đúc kết, bài học và mô hình tư duy</p>
-  </div>
+<strong>🧠 Insights</strong>
+<span>Kiến thức đúc kết, bài học và mô hình tư duy</span>
 </a>
-
 <a href="journal" class="category-card">
-  <div class="cat-icon-wrap journal-color">J</div>
-  <div class="cat-body">
-    <h3>📅 Journal</h3>
-    <p>Nhật ký, suy nghĩ và cảm xúc hàng ngày</p>
-  </div>
+<strong>📅 Journal</strong>
+<span>Nhật ký, suy nghĩ và cảm xúc hàng ngày</span>
 </a>
-
 <a href="tech" class="category-card">
-  <div class="cat-icon-wrap tech-color">T</div>
-  <div class="cat-body">
-    <h3>💡 Tech</h3>
-    <p>Công nghệ, lập trình, công cụ và workflow</p>
-  </div>
+<strong>💡 Tech</strong>
+<span>Công nghệ, lập trình, công cụ và workflow</span>
 </a>
-
 </div>
 
 ## Bài viết gần đây
