@@ -26,6 +26,10 @@ title: Minhread
 <strong>💡 Tech</strong>
 <span>Công nghệ, lập trình, công cụ và workflow</span>
 </a>
+<a href="other" class="category-card">
+<strong>📌 Other</strong>
+<span>Những bài viết chưa được phân loại vào danh mục cụ thể</span>
+</a>
 </div>
 
 ## Bài viết gần đây

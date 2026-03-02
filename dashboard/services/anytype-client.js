@@ -78,7 +78,7 @@ function getTargetFolder(tags = []) {
     for (const { folder, match } of mapping) {
         if (tagNames.some(t => match.includes(t))) return folder;
     }
-    return ''; // root content/
+    return 'other'; // no matching tag → Other category
 }
 
 
