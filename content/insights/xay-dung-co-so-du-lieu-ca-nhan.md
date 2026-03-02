@@ -4,7 +4,10 @@ date: 2026-03-02
 tags:
   - publish
   - knowledge
+description: "Intro Không nhớ được những gì đã đọc, đã học Không nhớ được những ý tưởng hay đã có Lướt rất nhiều thông tin ⇒ trông có vẻ đang học hỏi, phát triển ⇒ thực tế không đọng lại gì ⇒ Do không cơ sở dữ liệu cá nhân. Link tham khảo: Define Cơ sở dữ liệu cá nhân là: Lưu trữ một các có hệ thống các ý …"
 ---
+
+Cơ sở dữ liệu cá nhân là năng lực cạnh tranh lớn nhất, là tài sản không ai cướp được.
 
 # Intro
 
