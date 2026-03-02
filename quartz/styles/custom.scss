@@ -145,76 +145,13 @@
 // ============================================================
 .recent-notes {
 
-    // Hide only the direct section-title h3, NOT the article title h3s inside items
+    // Hide only the section-title h3, not the per-article title h3s
     >h3:first-child {
         display: none;
     }
-}
 
-.recent-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.recent-li {
-    border-bottom: 1px solid var(--lightgray);
-    padding: 1rem 0;
-
-    &:last-child {
-        border-bottom: none;
-    }
-
-    .section {
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-    }
-
-    .desc h3 {
+    // Ensure items render with titles visible
+    .section h3 {
         margin: 0;
-        font-size: 1rem;
-        font-weight: 600;
-
-        a {
-            color: var(--dark);
-            text-decoration: none;
-
-            &:hover {
-                color: var(--secondary);
-            }
-        }
-    }
-
-    .meta {
-        font-size: 0.82rem;
-        color: var(--gray);
-        margin: 0;
-    }
-
-    .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.35rem;
-        list-style: none;
-        padding: 0;
-        margin: 0.25rem 0 0;
-
-        li a {
-            font-size: 0.75rem;
-            padding: 2px 8px;
-            border-radius: 999px;
-            background: var(--highlight);
-            color: var(--secondary);
-            text-decoration: none;
-            border: 1px solid var(--lightgray);
-            transition: background 0.15s;
-
-            &:hover {
-                background: var(--secondary);
-                color: white;
-                border-color: var(--secondary);
-            }
-        }
     }
 }
